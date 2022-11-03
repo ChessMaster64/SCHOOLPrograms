@@ -26,27 +26,6 @@ public class Diarec
         System.out.println();
         for(int i=a;i>=0;i--)
         {
-            if(a==ar.length&&i==0)
-            {
-                while(a!=i)
-                {
-                    for(int m=0;m<=i;m++)
-                    {
-                        System.out.print(ar[m]);
-                    }
-                    for(int p=0;p<=a-i;p++)
-                    {
-                        System.out.print(" ");
-                    }
-                    for(int n=2*s.length();n>=a;n--)
-                    {
-                        System.out.print(ar[n]);
-                    }
-                    System.out.println();
-                    a--;
-                    i++;
-                }
-            }
             if(i==a)
             {
                 for(int f=0;f<2*s.length()+1;f++)
@@ -71,6 +50,33 @@ public class Diarec
             }
             System.out.println();
             a++;
+        }
+        a=ar.length-1;
+        for( int v=1;v<=j;v++)
+        {
+            for(int q=0;q<=v;q++)
+            {
+                System.out.print(ar[q]);
+            }
+            for(int p=0;p<=a-v-2;p++)
+            {
+                if(p!=0)
+                    System.out.print(" ");
+            }
+            for(int l=a-1;l<=ar.length-1;l++)
+            {
+                if(l==(ar.length/2))
+                {
+                    for(int z=0;z<=s.length()-1;z++)
+                    {
+                        System.out.print(ar[z]);
+                    }
+                    break;
+                }
+                System.out.print(ar[l-((ar.length/2)+1)]);
+            }   
+            System.out.println();
+            a--;
         }
     }
 }
